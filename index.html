@@ -4,17 +4,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jeremy St Quentin</title>
+
   <style>
-    html, body { height: 100%; margin: 0; background: #000; }
-    a { display: block; height: 100%; }
-    video { width: 100%; height: 100%; object-fit: cover; display: block; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      height: 100%;
+    }
+
+    .video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100dvh; /* dynamic viewport height for mobile */
+      overflow: hidden;
+    }
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
   </style>
 </head>
+
 <body>
   <a href="mailto:jeremy@jeremystquentin.com">
-    <video autoplay muted loop playsinline preload="auto">
-      <source src="landing.mp4" type="video/mp4" />
-    </video>
+    <div class="video-container">
+      <video autoplay muted loop playsinline preload="auto">
+        <source src="landing.mp4" type="video/mp4" />
+      </video>
+    </div>
   </a>
 </body>
 </html>
